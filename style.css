@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    /* background: #0f0c29; */
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(-135deg, #24243e, #302b63, #0f0c29);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-135deg, #24243e, #302b63, #0f0c29);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 10px;
+}
+
+.todo{
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding:40px 30px 20px;
+    background: #F6F5F2;
+    border-radius: 10px;
+}
+
+.todo h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color:#302B63;
+}
+
+ .todo h2 img{
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+ }
+
+ .row{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background:#edeef0;
+    padding-left: 20px;
+    border-radius:30px;
+ }
+ #input-box{
+    flex:1;
+    border: none;
+    outline: none;
+    background:transparent;
+    
+    font-weight: 14px;
+ }
+
+ #addBtn{
+    background: #302b63;
+    color: #fff;
+    border: none;
+    padding: 16px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+ }
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 40px;
+    color:#302B63;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #302b63;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ul li.checked{
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    width: 28px;
+    height: 30px;
+    background:url(./checked.svg);
+    background-size: cover;
+    border: none;
+}
+
+ul li span{
+    cursor: pointer;
+    position: absolute ;
+    right: 0;
+    top:5px;
+    width: 35px;
+    height: 35px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+ul li span:hover{
+    background: #ccc;
+    color: #302b63;
+    border-radius: 20%;
+
+}
+
+.delete{
+    animation: delete 0.5s ease;
+}
+
+@keyframes delete{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+.add{
+    animation: add 0.5s ease;
+}
+@keyframes add{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
