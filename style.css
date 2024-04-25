@@ -154,3 +154,22 @@ ul li span:hover{
         transform: translateX(0);
     }
 }
+
+
+#status {
+    display: flex;
+    justify-content: space-between;
+    color:#302B63;
+    margin-bottom: 20px;
+    
+}
+#status h3{
+    cursor: pointer;
+}
+.active{
+    color: #1679AB;
+    font-weight: 700;
+    border-bottom: 2px solid #1679AB;
+    padding-bottom: 5px;
+
+}
