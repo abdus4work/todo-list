@@ -158,7 +158,8 @@ main{
 /* Remove focus outline for clickable elements */
 button:focus,
 input:focus,
-div:focus {
+#clearBtn:focus
+#add-btn:focus {
     outline: none; /* Remove the default focus outline */
 }
 
